@@ -7,6 +7,13 @@ class BlockchainUtilities():
         self.blocks = blockchain.get_blockchain()
 
     def show_blockchain(self) -> None:
+        bHashT = "Block Hash"
+        bDataT = "Block Data"
+        bDateTimeT = "Date&Time"
+        bPrevHashT = "Block Previous Hash"
+        sHash =((64 - len(bHashT))*" ")
+        sDate = ((32 - len(bDateTimeT))* " ")
+        print(f"{bHashT} {sHash}\t{bDataT}\t{bDateTimeT}\t{sDate}\t{bPrevHashT}"  )
 
         for block in self.blocks:
             print(block.to_string())
