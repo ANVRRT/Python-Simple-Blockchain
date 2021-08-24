@@ -1,3 +1,6 @@
+from hashlib import sha256
+from datetime import *
+
 class Block():
   #<--------------- Starts Constructor --------------->
     def __init__(self, data, previousBlockHash):
